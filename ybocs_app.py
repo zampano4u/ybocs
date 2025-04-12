@@ -326,18 +326,18 @@ def main():
         st.session_state["confirmed"] = False
     if "submitted" not in st.session_state:
         st.session_state["submitted"] = False
-    if "selected_symptoms_ko" not in st.session_state:
-        st.session_state["selected_symptoms_ko"] = []
-    if "selected_symptoms_en" not in st.session_state:
-        st.session_state["selected_symptoms_en"] = []
+    if "selected_symptoms_current" not in st.session_state:
+        st.session_state["selected_symptoms_current"] = []
+    if "selected_symptoms_past" not in st.session_state:
+        st.session_state["selected_symptoms_past"] = []
     if "answers" not in st.session_state:
         st.session_state["answers"] = {}  # key: 문항 id, value: 선택한 옵션 인덱스
 
     # 1단계: 도입 증상 체크리스트 화면
     if not st.session_state["confirmed"]:
         st.header("도입 증상 체크리스트")
-        st.write("아래 항목에서 해당하는 증상을 선택해주세요.")
-        # ybo_cs_mapping의 각 카테고리별로 체크박스 렌더링
+        st.write("아래 항목에서 해당하는 증상을 선택해주세요. 각 항목마다 '없음', '현재(최근 일주일간)', '과거' 중 하나를 선택하실 수 있습니다.")
+        # ybo_cs_mapping의 각 카테고리별로 라디오 버튼 렌더링
         for category_key, category in ybo_cs_mapping.items():
             st.subheader(category["question_ko"])
             for idx, item in enumerate(category["items"]):
@@ -349,14 +349,28 @@ def main():
                     cat_keyword_en = category["question_en"].split()[0]
                     display_ko = f"기타: {cat_keyword_ko}"
                     display_en = f"Other: {cat_keyword_en}"
-                # 고유한 키를 사용하여 체크박스 생성
-                selected_item = st.checkbox(display_ko, key=f"{category_key}_{idx}")
-                if selected_item:
-                    # 중복 저장 방지 후 선택한 항목 저장 (수정된 텍스트 사용)
-                    if display_ko not in st.session_state["selected_symptoms_ko"]:
-                        st.session_state["selected_symptoms_ko"].append(display_ko)
-                        st.session_state["selected_symptoms_en"].append(display_en)
+                # 라디오 버튼 생성: 옵션 - "없음", "현재(최근 일주일간)", "과거"
+                st.radio(
+                    label=f"{display_ko}",
+                    options=["없음", "현재(최근 일주일간)", "과거"],
+                    index=0,
+                    key=f"{category_key}_{idx}"
+                )
         if st.button("증상 선택 완료"):
+            # 각 증상별로 선택된 값을 확인하여 현재 증상, 과거 증상 리스트에 추가
+            for category_key, category in ybo_cs_mapping.items():
+                for idx, item in enumerate(category["items"]):
+                    key_name = f"{category_key}_{idx}"
+                    if key_name in st.session_state:
+                        selection = st.session_state[key_name]
+                        display_en = item["en"]
+                        if item["ko"] == "기타":
+                            cat_keyword_en = category["question_en"].split()[0]
+                            display_en = f"Other: {cat_keyword_en}"
+                        if selection == "현재(최근 일주일간)":
+                            st.session_state["selected_symptoms_current"].append(display_en)
+                        elif selection == "과거":
+                            st.session_state["selected_symptoms_past"].append(display_en)
             st.session_state["confirmed"] = True
 
     # 2단계: 평가 문항 화면
@@ -402,11 +416,13 @@ def main():
         interpretation = interpret_score(total_score)
         results_text += f"Interpretation: {interpretation}\n\n"
         
-        # 선택한 증상(영어) 항목을 하나의 문자열로 결합
-        english_symptoms = ", ".join(st.session_state["selected_symptoms_en"]) if st.session_state["selected_symptoms_en"] else "None"
-        results_text += f"Selected symptoms (English): {english_symptoms}\n"
+        # 선택한 증상을 현재와 과거로 별도 결합
+        current_symptoms = ", ".join(st.session_state["selected_symptoms_current"]) if st.session_state["selected_symptoms_current"] else "None"
+        past_symptoms = ", ".join(st.session_state["selected_symptoms_past"]) if st.session_state["selected_symptoms_past"] else "None"
+        results_text += f"Selected Symptoms (Current): {current_symptoms}\n"
+        results_text += f"Selected Symptoms (Past): {past_symptoms}\n"
         
-        # st.markdown을 이용한 코드 블록으로 출력하여 줄바꿈이 정상적으로 적용되도록 합니다.
+        # 마크다운 코드 블록 내에서 결과 텍스트 출력
         st.markdown(f"```\n{results_text}\n```")
 
 if __name__ == "__main__":
