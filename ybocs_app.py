@@ -194,7 +194,7 @@ y_bocs_scale = [
         "question_ko": "강박 사고로 인한 기능적 방해",
         "question_en": "INTERFERENCE DUE TO OBSESSIVE THOUGHTS",
         "description_ko": "귀하의 강박 사고가 귀하의 업무, 학업, 사회생활 또는 기타 중요한 역할 수행에 얼마나 방해가 됩니까? 그로 인해 하지 못하는 일이 있습니까?",
-        "description_en": "How much do your obsessive thoughts interfere with your work, school, social, or other important role functioning? Is there anything that you don’t do because of them?",
+        "description_en": "How much do your obsessive thoughts interfere with your work, school, social, or other important role functioning? Is there anything that you don't do because of them?",
         "options": [
             {"score": 0, "response_text_ko": "전혀 없음", "response_text_en": "None"},
             {"score": 1, "response_text_ko": "사회적 또는 기타 활동에 약간의 방해가 있으나, 전반적인 수행에는 지장이 없음", "response_text_en": "Slight interference with social or other activities, but overall performance not impaired"},
@@ -264,7 +264,7 @@ y_bocs_scale = [
         "question_ko": "강박 행동으로 인한 기능적 방해",
         "question_en": "INTERFERENCE DUE TO COMPULSIVE BEHAVIOR",
         "description_ko": "귀하의 강박 행동이 귀하의 업무, 학업, 사회생활 또는 기타 중요한 역할 수행에 얼마나 방해가 됩니까? 강박 행동 때문에 하지 못하는 일이 있습니까?",
-        "description_en": "How much do your compulsive behaviors interfere with your work, school, social, or other important role functioning? Is there anything that you don’t do because of the compulsions?",
+        "description_en": "How much do your compulsive behaviors interfere with your work, school, social, or other important role functioning? Is there anything that you don't do because of the compulsions?",
         "options": [
             {"score": 0, "response_text_ko": "전혀 없음", "response_text_en": "None"},
             {"score": 1, "response_text_ko": "사회적 또는 기타 활동에 약간의 방해가 있으나, 전반적인 수행에는 지장이 없음", "response_text_en": "Slight interference with social or other activities, but overall performance not impaired"},
@@ -274,156 +274,219 @@ y_bocs_scale = [
         ]
     },
     {
-        "id": 8,
-        "question_ko": "강박 행동과 관련된 고통의 정도",
-        "question_en": "DISTRESS ASSOCIATED WITH COMPULSIVE BEHAVIOR",
-        "description_ko": "강박 행동을 하지 못하게 되었을 경우, 어떤 기분이 드시겠습니까? 불안 수준은 어느 정도로 증가하겠습니까?",
-        "description_en": "How would you feel if prevented from performing your compulsion(s)? How anxious would you become?",
-        "options": [
-            {"score": 0, "response_text_ko": "전혀 없음", "response_text_en": "None"},
-            {"score": 1, "response_text_ko": "강박 행동을 하지 못하더라도 약간의 불안만 느낌", "response_text_en": "Only slightly anxious if compulsions prevented"},
-            {"score": 2, "response_text_ko": "강박 행동을 못 하면 불안이 증가하나, 여전히 감당 가능함", "response_text_en": "Anxiety would mount but remain manageable if compulsions prevented"},
-            {"score": 3, "response_text_ko": "강박 행동이 중단되면 뚜렷하고 매우 괴로운 불안이 발생함", "response_text_en": "Prominent and very disturbing increase in anxiety if compulsions interrupted"},
-            {"score": 4, "response_text_ko": "활동을 수정하려는 어떠한 개입으로 인해도 심각한 불안이 유발되어 기능이 마비됨", "response_text_en": "Incapacitating anxiety from any intervention aimed at modifying activity"}
-        ]
-    },
-    {
-        "id": 9,
-        "question_ko": "강박 행동에 대한 저항 노력",
-        "question_en": "RESISTANCE AGAINST COMPULSIONS",
-        "description_ko": "귀하는 강박 행동에 대해 어느 정도 저항하려고 노력하십니까?",
-        "description_en": "How much of an effort do you make to resist the compulsions?",
-        "options": [
-            {"score": 0, "response_text_ko": "항상 저항하려고 노력함", "response_text_en": "Always try to resist"},
-            {"score": 1, "response_text_ko": "대부분의 시간에 저항하려고 노력함", "response_text_en": "Try to resist most of the time"},
-            {"score": 2, "response_text_ko": "어느 정도 저항하려는 노력을 함", "response_text_en": "Make some effort to resist"},
-            {"score": 3, "response_text_ko": "거의 모든 강박 행동에 저항하지 않고 굴복하나, 약간의 꺼림칙함은 있음", "response_text_en": "Yield to almost all compulsions without attempting to control them, but with some reluctance"},
-            {"score": 4, "response_text_ko": "완전히 자발적으로 모든 강박 행동에 굴복함", "response_text_en": "Completely and willingly yield to all compulsions"}
-        ]
-    },
-    {
-        "id": 10,
-        "question_ko": "강박 행동에 대한 통제력",
-        "question_en": "DEGREE OF CONTROL OVER COMPULSIVE BEHAVIOR",
-        "description_ko": "강박 행동을 수행하고자 하는 충동은 어느 정도로 강합니까? 귀하는 이러한 충동을 얼마나 잘 통제하실 수 있습니까?",
-        "description_en": "How strong is the drive to perform the compulsive behavior? How much control do you have over the compulsions?",
-        "options": [
-            {"score": 0, "response_text_ko": "완전히 통제 가능함", "response_text_en": "Complete control"},
-            {"score": 1, "response_text_ko": "행동을 수행하고자 하는 압박은 있으나, 대체로 자발적 통제를 유지할 수 있음", "response_text_en": "Pressure to perform the behavior but usually able to exercise voluntary control over it"},
-            {"score": 2, "response_text_ko": "행동을 수행하고자 하는 압박이 강하며, 통제가 어렵긴 해도 어느 정도는 가능함", "response_text_en": "Strong pressure to perform behavior, can control it only with difficulty"},
-            {"score": 3, "response_text_ko": "행동에 대한 강한 충동이 있어 반드시 끝까지 수행해야 하며, 지연시키는 것조차 어렵습니다", "response_text_en": "Very strong drive to perform behavior, must be carried to completion, can only delay with difficulty"},
-            {"score": 4, "response_text_ko": "행동에 대한 충동은 완전히 비자발적이고 압도적이며, 순간적으로라도 지연시키는 것이 거의 불가능합니다", "response_text_en": "Drive to perform behavior experienced as completely involuntary and overpowering, rarely able to even momentarily delay activity."}
-        ]
-    }
+       "id": 8,
+       "question_ko": "강박 행동과 관련된 고통의 정도",
+       "question_en": "DISTRESS ASSOCIATED WITH COMPULSIVE BEHAVIOR",
+       "description_ko": "강박 행동을 하지 못하게 되었을 경우, 어떤 기분이 드시겠습니까? 불안 수준은 어느 정도로 증가하겠습니까?",
+       "description_en": "How would you feel if prevented from performing your compulsion(s)? How anxious would you become?",
+       "options": [
+           {"score": 0, "response_text_ko": "전혀 없음", "response_text_en": "None"},
+           {"score": 1, "response_text_ko": "강박 행동을 하지 못하더라도 약간의 불안만 느낌", "response_text_en": "Only slightly anxious if compulsions prevented"},
+           {"score": 2, "response_text_ko": "강박 행동을 못 하면 불안이 증가하나, 여전히 감당 가능함", "response_text_en": "Anxiety would mount but remain manageable if compulsions prevented"},
+           {"score": 3, "response_text_ko": "강박 행동이 중단되면 뚜렷하고 매우 괴로운 불안이 발생함", "response_text_en": "Prominent and very disturbing increase in anxiety if compulsions interrupted"},
+           {"score": 4, "response_text_ko": "활동을 수정하려는 어떠한 개입으로 인해도 심각한 불안이 유발되어 기능이 마비됨", "response_text_en": "Incapacitating anxiety from any intervention aimed at modifying activity"}
+       ]
+   },
+   {
+       "id": 9,
+       "question_ko": "강박 행동에 대한 저항 노력",
+       "question_en": "RESISTANCE AGAINST COMPULSIONS",
+       "description_ko": "귀하는 강박 행동에 대해 어느 정도 저항하려고 노력하십니까?",
+       "description_en": "How much of an effort do you make to resist the compulsions?",
+       "options": [
+           {"score": 0, "response_text_ko": "항상 저항하려고 노력함", "response_text_en": "Always try to resist"},
+           {"score": 1, "response_text_ko": "대부분의 시간에 저항하려고 노력함", "response_text_en": "Try to resist most of the time"},
+           {"score": 2, "response_text_ko": "어느 정도 저항하려는 노력을 함", "response_text_en": "Make some effort to resist"},
+           {"score": 3, "response_text_ko": "거의 모든 강박 행동에 저항하지 않고 굴복하나, 약간의 꺼림칙함은 있음", "response_text_en": "Yield to almost all compulsions without attempting to control them, but with some reluctance"},
+           {"score": 4, "response_text_ko": "완전히 자발적으로 모든 강박 행동에 굴복함", "response_text_en": "Completely and willingly yield to all compulsions"}
+       ]
+   },
+   {
+       "id": 10,
+       "question_ko": "강박 행동에 대한 통제력",
+       "question_en": "DEGREE OF CONTROL OVER COMPULSIVE BEHAVIOR",
+       "description_ko": "강박 행동을 수행하고자 하는 충동은 어느 정도로 강합니까? 귀하는 이러한 충동을 얼마나 잘 통제하실 수 있습니까?",
+       "description_en": "How strong is the drive to perform the compulsive behavior? How much control do you have over the compulsions?",
+       "options": [
+           {"score": 0, "response_text_ko": "완전히 통제 가능함", "response_text_en": "Complete control"},
+           {"score": 1, "response_text_ko": "행동을 수행하고자 하는 압박은 있으나, 대체로 자발적 통제를 유지할 수 있음", "response_text_en": "Pressure to perform the behavior but usually able to exercise voluntary control over it"},
+           {"score": 2, "response_text_ko": "행동을 수행하고자 하는 압박이 강하며, 통제가 어렵긴 해도 어느 정도는 가능함", "response_text_en": "Strong pressure to perform behavior, can control it only with difficulty"},
+           {"score": 3, "response_text_ko": "행동에 대한 강한 충동이 있어 반드시 끝까지 수행해야 하며, 지연시키는 것조차 어렵습니다", "response_text_en": "Very strong drive to perform behavior, must be carried to completion, can only delay with difficulty"},
+           {"score": 4, "response_text_ko": "행동에 대한 충동은 완전히 비자발적이고 압도적이며, 순간적으로라도 지연시키는 것이 거의 불가능합니다", "response_text_en": "Drive to perform behavior experienced as completely involuntary and overpowering, rarely able to even momentarily delay activity."}
+       ]
+   }
 ]
 
 # 메인 함수: 앱 상태(증상 체크리스트 / 평가 문항 / 결과 출력)에 따라 화면 전환
 def main():
-    st.title("Y-BOCS 평가 웹앱")
-    
-    # st.session_state 초기화
-    if "confirmed" not in st.session_state:
-        st.session_state["confirmed"] = False
-    if "submitted" not in st.session_state:
-        st.session_state["submitted"] = False
-    if "selected_symptoms_current" not in st.session_state:
-        st.session_state["selected_symptoms_current"] = []
-    if "selected_symptoms_past" not in st.session_state:
-        st.session_state["selected_symptoms_past"] = []
-    if "answers" not in st.session_state:
-        st.session_state["answers"] = {}  # key: 문항 id, value: 선택한 옵션 인덱스
+   st.title("Y-BOCS 평가 웹앱")
+   
+   # st.session_state 초기화
+   if "confirmed" not in st.session_state:
+       st.session_state["confirmed"] = False
+   if "submitted" not in st.session_state:
+       st.session_state["submitted"] = False
+   if "selected_symptoms_current" not in st.session_state:
+       st.session_state["selected_symptoms_current"] = []
+   if "selected_symptoms_past" not in st.session_state:
+       st.session_state["selected_symptoms_past"] = []
+   if "answers" not in st.session_state:
+       st.session_state["answers"] = {}  # key: 문항 id, value: 선택한 옵션 인덱스
 
-    # 1단계: 도입 증상 체크리스트 화면
-    if not st.session_state["confirmed"]:
-        st.header("도입 증상 체크리스트")
-        st.write("아래 항목에서 해당하는 증상을 선택해주세요. 각 항목마다 '없음', '현재(최근 일주일간)', '과거' 중 하나를 선택하실 수 있습니다.")
-        # ybo_cs_mapping의 각 카테고리별로 라디오 버튼 렌더링
-        for category_key, category in ybo_cs_mapping.items():
-            st.subheader(category["question_ko"])
-            for idx, item in enumerate(category["items"]):
-                # "기타" 항목이면 카테고리의 제목에서 첫 번째 단어를 추출하여 수정
-                display_ko = item["ko"]
-                display_en = item["en"]
-                if item["ko"] == "기타":
-                    cat_keyword_ko = category["question_ko"].split()[0]
-                    cat_keyword_en = category["question_en"].split()[0]
-                    display_ko = f"기타: {cat_keyword_ko}"
-                    display_en = f"Other: {cat_keyword_en}"
-                # 라디오 버튼 생성: 옵션 - "없음", "현재(최근 일주일간)", "과거"
-                st.radio(
-                    label=f"{display_ko}",
-                    options=["없음", "현재(최근 일주일간)", "과거"],
-                    index=0,
-                    key=f"{category_key}_{idx}"
-                )
-        if st.button("증상 선택 완료"):
-            # 각 증상별로 선택된 값을 확인하여 현재 증상, 과거 증상 리스트에 추가
-            for category_key, category in ybo_cs_mapping.items():
-                for idx, item in enumerate(category["items"]):
-                    key_name = f"{category_key}_{idx}"
-                    if key_name in st.session_state:
-                        selection = st.session_state[key_name]
-                        display_en = item["en"]
-                        if item["ko"] == "기타":
-                            cat_keyword_en = category["question_en"].split()[0]
-                            display_en = f"Other: {cat_keyword_en}"
-                        if selection == "현재(최근 일주일간)":
-                            st.session_state["selected_symptoms_current"].append(display_en)
-                        elif selection == "과거":
-                            st.session_state["selected_symptoms_past"].append(display_en)
-            st.session_state["confirmed"] = True
+   # 1단계: 도입 증상 체크리스트 화면
+   if not st.session_state["confirmed"]:
+       st.header("도입 증상 체크리스트")
+       st.write("아래 항목에서 해당하는 증상을 선택해주세요. 각 항목마다 '없음', '현재(최근 일주일간)', '과거' 중 하나를 선택하실 수 있습니다.")
+       # ybo_cs_mapping의 각 카테고리별로 라디오 버튼 렌더링
+       for category_key, category in ybo_cs_mapping.items():
+           st.subheader(category["question_ko"])
+           for idx, item in enumerate(category["items"]):
+               # "기타" 항목이면 카테고리의 제목에서 첫 번째 단어를 추출하여 수정
+               display_ko = item["ko"]
+               display_en = item["en"]
+               if item["ko"] == "기타":
+                   cat_keyword_ko = category["question_ko"].split()[0]
+                   cat_keyword_en = category["question_en"].split()[0]
+                   display_ko = f"기타: {cat_keyword_ko}"
+                   display_en = f"Other: {cat_keyword_en}"
+               # 라디오 버튼 생성: 옵션 - "없음", "현재(최근 일주일간)", "과거"
+               st.radio(
+                   label=f"{display_ko}",
+                   options=["없음", "현재(최근 일주일간)", "과거"],
+                   index=0,
+                   key=f"{category_key}_{idx}"
+               )
+       if st.button("증상 선택 완료"):
+           # 각 증상별로 선택된 값을 확인하여 현재 증상, 과거 증상 리스트에 추가
+           for category_key, category in ybo_cs_mapping.items():
+               for idx, item in enumerate(category["items"]):
+                   key_name = f"{category_key}_{idx}"
+                   if key_name in st.session_state:
+                       selection = st.session_state[key_name]
+                       display_en = item["en"]
+                       if item["ko"] == "기타":
+                           cat_keyword_en = category["question_en"].split()[0]
+                           display_en = f"Other: {cat_keyword_en}"
+                       if selection == "현재(최근 일주일간)":
+                           st.session_state["selected_symptoms_current"].append(display_en)
+                       elif selection == "과거":
+                           st.session_state["selected_symptoms_past"].append(display_en)
+           st.session_state["confirmed"] = True
 
-    # 2단계: 평가 문항 화면
-    elif not st.session_state["submitted"]:
-        st.header("Y-BOCS 평가 문항")
-        st.write("아래 문항에 대해 해당하는 선택지를 선택해주세요.")
-        for question in y_bocs_scale:
-            options_list = [option["response_text_ko"] for option in question["options"]]
-            selected = st.selectbox(
-                f"{question['id']}. {question['question_ko']}\n{question['description_ko']}",
-                options_list,
-                key=f"q_{question['id']}"
-            )
-            score_index = options_list.index(selected)
-            st.session_state["answers"][question["id"]] = score_index
-        if st.button("제출"):
-            st.session_state["submitted"] = True
+   # 2단계: 평가 문항 화면
+   elif not st.session_state["submitted"]:
+       st.header("Y-BOCS 평가 문항")
+       st.write("아래 문항에 대해 해당하는 선택지를 선택해주세요.")
+       for question in y_bocs_scale:
+           options_list = [option["response_text_ko"] for option in question["options"]]
+           selected = st.selectbox(
+               f"{question['id']}. {question['question_ko']}\n{question['description_ko']}",
+               options_list,
+               key=f"q_{question['id']}"
+           )
+           score_index = options_list.index(selected)
+           st.session_state["answers"][question["id"]] = score_index
+       if st.button("제출"):
+           st.session_state["submitted"] = True
 
-    # 3단계: 결과 출력 화면 (영어로만 출력)
-    else:
-        st.header("Evaluation Results")
-        total_score = 0
-        results_text = "Yale-Brown Obsessive Compulsive Scale (Y-BOCS)\n\n"
-        for question in y_bocs_scale:
-            qid = question["id"]
-            selected_index = st.session_state["answers"].get(qid, 0)
-            total_score += question["options"][selected_index]["score"]
-            results_text += f"{qid}. {question['question_en']}\n"
-            results_text += f"   ({selected_index}) {question['options'][selected_index]['response_text_en']}\n\n"
-        results_text += f"Total Score: {total_score}\n"
-        # 임상적 해석 함수 (점수 구간에 따라 해석을 제공합니다.)
-        def interpret_score(score):
-            if score <= 7:
-                return "Minimal symptoms (0-7 points)"
-            elif score <= 15:
-                return "Mild symptoms (8-15 points)"
-            elif score <= 23:
-                return "Moderate symptoms (16-23 points)"
-            elif score <= 31:
-                return "Severe symptoms (24-31 points)"
-            else:
-                return "Extreme symptoms (32-40 points)"
-        interpretation = interpret_score(total_score)
-        results_text += f"Interpretation: {interpretation}\n\n"
-        
-        # 선택한 증상을 현재와 과거로 별도 결합
-        current_symptoms = ", ".join(st.session_state["selected_symptoms_current"]) if st.session_state["selected_symptoms_current"] else "None"
-        past_symptoms = ", ".join(st.session_state["selected_symptoms_past"]) if st.session_state["selected_symptoms_past"] else "None"
-        results_text += f"Selected Symptoms (Current): {current_symptoms}\n"
-        results_text += f"Selected Symptoms (Past): {past_symptoms}\n"
-        
-        # 마크다운 코드 블록 내에서 결과 텍스트 출력
-        st.markdown(f"```\n{results_text}\n```")
+   # 3단계: 결과 출력 화면 (한국어/영어 탭으로 나누어 출력)
+   else:
+       st.header("평가 결과")
+       
+       # 탭 생성 - 한국어와 영어 결과 구분
+       tab1, tab2 = st.tabs(["한국어 결과", "English Results"])
+       
+       # 총점 계산
+       total_score = 0
+       for question in y_bocs_scale:
+           qid = question["id"]
+           selected_index = st.session_state["answers"].get(qid, 0)
+           total_score += question["options"][selected_index]["score"]
+       
+       # 임상적 해석 함수 (점수 구간에 따라 해석을 제공합니다.)
+       def interpret_score_ko(score):
+           if score <= 7:
+               return "최소 증상 (0-7점)"
+           elif score <= 15:
+               return "경미한 증상 (8-15점)"
+           elif score <= 23:
+               return "중등도 증상 (16-23점)"
+           elif score <= 31:
+               return "심각한 증상 (24-31점)"
+           else:
+               return "극심한 증상 (32-40점)"
+               
+       def interpret_score_en(score):
+           if score <= 7:
+               return "Minimal symptoms (0-7 points)"
+           elif score <= 15:
+               return "Mild symptoms (8-15 points)"
+           elif score <= 23:
+               return "Moderate symptoms (16-23 points)"
+           elif score <= 31:
+               return "Severe symptoms (24-31 points)"
+           else:
+               return "Extreme symptoms (32-40 points)"
+       
+       # 한국어 탭 내용
+       with tab1:
+           results_text_ko = "예일-브라운 강박 증상 척도 (Y-BOCS)\n\n"
+           for question in y_bocs_scale:
+               qid = question["id"]
+               selected_index = st.session_state["answers"].get(qid, 0)
+               results_text_ko += f"{qid}. {question['question_ko']}\n"
+               results_text_ko += f"   ({selected_index}) {question['options'][selected_index]['response_text_ko']}\n\n"
+           results_text_ko += f"총점: {total_score}\n"
+           interpretation_ko = interpret_score_ko(total_score)
+           results_text_ko += f"해석: {interpretation_ko}\n\n"
+           
+           # 선택한 증상을 현재와 과거로 구분하여 표시 (줄바꿈)
+           if st.session_state["selected_symptoms_current"]:
+               results_text_ko += "선택한 증상 (현재):\n"
+               for symptom in st.session_state["selected_symptoms_current"]:
+                   results_text_ko += f"- {symptom}\n"
+           else:
+               results_text_ko += "선택한 증상 (현재): 없음\n"
+           
+           if st.session_state["selected_symptoms_past"]:
+               results_text_ko += "\n선택한 증상 (과거):\n"
+               for symptom in st.session_state["selected_symptoms_past"]:
+                   results_text_ko += f"- {symptom}\n"
+           else:
+               results_text_ko += "\n선택한 증상 (과거): 없음\n"
+           
+           # 마크다운 코드 블록 내에서 결과 텍스트 출력
+           st.markdown(f"```\n{results_text_ko}\n```")
+       
+       # 영어 탭 내용
+       with tab2:
+           results_text_en = "Yale-Brown Obsessive Compulsive Scale (Y-BOCS)\n\n"
+           for question in y_bocs_scale:
+               qid = question["id"]
+               selected_index = st.session_state["answers"].get(qid, 0)
+               results_text_en += f"{qid}. {question['question_en']}\n"
+               results_text_en += f"   ({selected_index}) {question['options'][selected_index]['response_text_en']}\n\n"
+           results_text_en += f"Total Score: {total_score}\n"
+           interpretation_en = interpret_score_en(total_score)
+           results_text_en += f"Interpretation: {interpretation_en}\n\n"
+           
+           # 선택한 증상을 현재와 과거로 구분하여 표시 (줄바꿈)
+           if st.session_state["selected_symptoms_current"]:
+               results_text_en += "Selected Symptoms (Current):\n"
+               for symptom in st.session_state["selected_symptoms_current"]:
+                   results_text_en += f"- {symptom}\n"
+           else:
+               results_text_en += "Selected Symptoms (Current): None\n"
+           
+           if st.session_state["selected_symptoms_past"]:
+               results_text_en += "\nSelected Symptoms (Past):\n"
+               for symptom in st.session_state["selected_symptoms_past"]:
+                   results_text_en += f"- {symptom}\n"
+           else:
+               results_text_en += "\nSelected Symptoms (Past): None\n"
+           
+           # 마크다운 코드 블록 내에서 결과 텍스트 출력
+           st.markdown(f"```\n{results_text_en}\n```")
 
 if __name__ == "__main__":
-    main()
+   main()
